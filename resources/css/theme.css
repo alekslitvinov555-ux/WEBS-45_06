@@ -1,0 +1,68 @@
+/* ========= GLOBAL UI STYLE ========= */
+
+body {
+    background-color: #050505;
+    color: #e4e4e7;
+    overflow-x: hidden;
+}
+
+/* ---- Noise Background ---- */
+.bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a3e635;
+}
+
+/* ---- Text outline effect ---- */
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.25);
+}
+.text-outline-hover:hover {
+    color: #a3e635;
+    -webkit-text-stroke: 0;
+    transition: .3s ease;
+}
+
+/* ---- Editorial asymmetrical layout helpers ---- */
+.skew-hero {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+}
+
+.skew-right {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.grayscale-hover img {
+    filter: grayscale(80%);
+    transition: .6s ease;
+}
+.grayscale-hover:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* ---- Floating animated glow ---- */
+.glow {
+    box-shadow: 0 0 80px rgba(163, 230, 53, 0.25);
+}
